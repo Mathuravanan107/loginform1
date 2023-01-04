@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LoginForm Webpage</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body>
+        <section class="first">
+            <div class="container">
+                <div class="row">
+                    <div class="col d-flex align-items-center" id="myform1">
+                        <form class="col-5 form" id="form1" onsubmit="return validateform()">
+                            <h2>Welcome to your professional community</h2>
+                           <input type="text" placeholder="Name" id="Name" name="name"><br><br>
+                           <input type="password"placeholder="Password" id="Password" name="password"><br><br>
+                           <button class="bg-primary text-white fel" type="submit" value="register">Sign In</button><br><br>
+                           <button class="bg-white">logn In</button>
+                        </form>
+                        <div>
+                            <img src="img/linkedin.svg" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            var details=[
+            {
+                Name:'Pandian',
+                Number:12345,
+            },
+            {
+                Name:'Rupu',
+                Number:12345,
+            },
+            {
+                Name:'Velmurugan',
+                Number:12345,
+            },
+            {
+                Name:'Pravin',
+                Number:12345,
+            },
+            {
+                Name:'Guru',
+                Number:12345,
+            },
+            {
+                Name:'Rajith',
+                Number:12345,
+            },
+        ]
+
+        var Name=document.getElementById("Name");
+        var number=document.getElementById("Password");
+        var foll=document.getElementById("first");
+        var form1=document.getElementById("form1");
+
+
+        function validateform(){  
+        var name=document.myform.name.value;  
+        var password=document.myform.password.value;  
+        
+        if (name==null || name==""){  
+        alert("Name can't be blank");  
+        return false;  
+        }else if(password.length<6){  
+        alert("Password must be at least 6 characters long.");  
+        return false;  
+        }  
+        }
+
+        // form1.addEventListener("submit",function(e){
+        //     e.preventDefault();
+        //     details.find((a)=>{
+        //         if(Name.value == a.Name && number.value == a.Number){
+        //             document.write("Hi! I'am "+a.Name);
+        //             document.write("<br>");
+        //             document.write("call:"+a.Number);
+        //         } 
+        //     });
+
+        // });
+
+       
+
+        </script>
+    </body>
+</html>
