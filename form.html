@@ -14,11 +14,11 @@
                 <div class="row">
                     <div class="col d-flex align-items-center" id="myform1">
                         <div class="col-5">
-                            <form class="form" id="form1">
+                            <form class="form" onsubmit="clicksubmit()" id="form1">
                                 <h2>Welcome to your professional community</h2>
                             <input type="text" placeholder="Name" id="Name">
-                            <input type="password"placeholder="Password" id="Password">
-                            <button class="bg-primary text-white fel" onsubmit="clicksubmit()" type="submit">Sign In</button>
+                            <input type="password" placeholder="Password" id="Password">
+                            <button class="bg-primary text-white fel"  type="submit">Sign In</button>
                             </form>
                             <button class="bg-white loginnn" onclick="loginclick()">Sign Up</button>
                         </div>
@@ -107,27 +107,27 @@
             var details=[
             {
                 Name:'Pandian',
-                Number:12345,
+                Number:12345
             },
             {
                 Name:'Rupu',
-                Number:12345,
+                Number:12345
             },
             {
                 Name:'Velmurugan',
-                Number:12345,
+                Number:12345
             },
             {
                 Name:'Pravin',
-                Number:12345,
+                Number:12345
             },
             {
                 Name:'Guru',
-                Number:12345,
+                Number:12345
             },
             {
                 Name:'Rajith',
-                Number:12345,
+                Number:12345
             },
         ]
 
@@ -147,14 +147,14 @@
             }
             else{
                 const method=details.filter((e)=>{
-                    if(e.name==Name.value && e.password==password.value){
+                    if(e.Name==Name.value && e.password==password.value){
                         return e;
                     }
                 });
                    if(method.length>0){
-                      form4.className="displaynone";
-                      secound.className="displaynone";
-                      thered.className="displayblock";
+                      form4.idName=("displaynone");
+                      secound.idName=("displaynone");
+                      thered.className=("displayblock");
                    }
                    else{
                     alert("error");
