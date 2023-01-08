@@ -10,6 +10,9 @@
     overflow: hidden;
     display: none;
 }
+.main-page{
+    display: none;
+}
 .form input{
     margin-bottom: 20px;
 }

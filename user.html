@@ -4,130 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <link rel="stylesheet"  href="css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	<title>Linkedin</title>
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light p-3 fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#"><iconify-icon class="man" icon="logos:linkedin-icon"></iconify-icon></a>
-             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-             <span class="navbar-toggler-icon"></span>
-             </button>
-             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              </form>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-         <ul class="navbar-nav">
-           <li class="nav-item ">
-            <iconify-icon class="d-flex justify-content-center" icon="material-symbols:home"></iconify-icon>
-             <a class="nav-link linke" aria-current="page" href="#hom">Home</a>
-           </li>
-           <li class="nav-item ">
-            <iconify-icon class="d-flex justify-content-center" icon="material-symbols:home"></iconify-icon>
-             <a class="nav-link linke" href="#aboutus">My Network</a>
-           </li>
-           <li class="nav-item">
-            <iconify-icon class="d-flex justify-content-center" icon="pajamas:work"></iconify-icon>
-             <a class="nav-link linke" href="#service">job</a>
-           </li>
-           <li class="nav-item">
-            <iconify-icon class="d-flex justify-content-center" icon="mdi:message-reply-text-outline"></iconify-icon>
-             <a class="nav-link linke" href="#portfolio">Messaging</a>
-           </li>
-           <li class="nav-item">
-            <iconify-icon class="d-flex justify-content-center" icon="ion:notifcations"></iconify-icon>
-             <a class="nav-link linke" href="#team">Notifications</a>
-           </li>
-           <li class="nav-item dropdown">
-             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-               Me
-             </a>
-             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-               <li><a class="dropdown-item" href="#">Action</a></li>
-               <li><a class="dropdown-item" href="#">Another action</a></li>
-               <li><a class="dropdown-item" href="#">Something else here</a></li>
-             </ul>
-            </li>
-           <li class="nav-item">
-             <a class="nav-link" href="#contact">Contact</a>
-           </li>
-           </ul>
-       </div>
-     </div>
-   </nav>
-</header>
-<script>
-   
-   var details=[
-            {
-                Name:'Pandian',
-                Number:9088547773,
-                batch:'fed03',
-                developer:'Frondend developer',
-            },
-            {
-                Name:'Rupu',
-                Number:9088547773,
-                batch:'fed03',
-                developer:'Frondend developer',
-            },
-            {
-                Name:'Velmurugan',
-                Number:9088547773,
-                batch:'fed03',
-                developer:'Frondend developer',
-            },
-            {
-                Name:'Pravin',
-                Number:9088547773,
-                batch:'fed03',
-                developer:'Frondend developer',
-            },
-            {
-                Name:'Guru',
-                Number:9088547773,
-                batch:'fed03',
-                developer:'Frondend developer',
-            },
-            {
-                Name:'Rajith',
-                Number:9088547773,
-                batch:'fed03',
-                developer:'Frondend developer',
-            },
-        ]
 
-    bikes.forEach((e)=>{
-        
-       let bikehole = document.getElementById("hole")
-        let bikeimg = document.createElement("div")
-        let bikeitems =document.createElement("div")
-        let bikedetails =document.createElement("div")
-        let bikebrand= document.createElement("h3");
-        let biketype =document.createElement("h4");
-        let bikeyear = document.createElement("h4");
-        let bikeprice =document.createElement("p");
+	<!--login form-->
+<section class="login-page active-page" id="login-page">
+	<div class="container">
+		<div class="row">
+			<div class="col1">
+				<img src="image/Linkedin.png" >
+				<h1>Welcome to your<br>professional community</h1>
+				<input type="text" placeholder="Enter your Phone Number" id="inp-name">
+				<input type="password" placeholder="Enter your Phone Password" id="inp-pass">
+				<div>
+					<button type="button" onclick="mySigninFunction()" id="btn1">Sign in</button><br>
+					<button type="button" onclick="showSingupPage()" id="btn2">Sign up</button>
+				</div>
+			</div>
+			<div class="col2">
+				<img src="image/main.svg">
+			</div>
+		</div>
+	</div>
+</section>
 
-       bikeitems.setAttribute("class","bike-items");
-       bikeimg.setAttribute("class","bike-img")
-       bikedetails.setAttribute("class","details")
+	<!--signup form-->
+
+<section class="signup-page" id="signup-page">
+	<div class="container-signup">
+		<div class="row-signup">
+			<div class="col1-signup">
+				<img src="image/Linkedin.png" >
+				<h1>SIGN UP</h1>
+				<input type="text" placeholder="Enter your First Name" id="">
+				<input type="text" placeholder="Enter your Last Name">
+				<input type="text" placeholder="Enter your Phone Number">
+				<input type="email" placeholder="Enter your Email">
+				<input type="date" value="">
+				<div class="sex">
+					<label>GENDER</label>
+					<input type="radio">Male
+					<input type="radio">Female
+				</div>
+				<input type="password" placeholder="Enter Password">
+				<input type="password" placeholder="Enter Confirm Password">
+				<div>
+					<button type="button" onclick="myCreateFunction()">Create Account</button>
+				</div>
+			</div>
+			<div class="col2-signup">
+				<img src="image/main.svg">
+			</div>
+		</div>
+	</div>
+</section>
+
+	<!--welcom page-->
+
+<section class="main-page" id="main-page">
+	<div>
+		<h1>welcome</h1>
+		<button type="button" onclick="showLoginPage()">Logout</button>
+	</div>
+</section>
 
 
-       bikeimg.style.backgroundImage = e.image;
-       bikebrand.innerText = e.brand;
-       biketype.innerText = e.type;
-       bikeyear.innerText = e.year;
-       bikeprice.innerText = e.price;
-
-
-       bikedetails.append(bikebrand,biketype,bikeyear,bikeprice);
-       bikeitems.append(bikeimg,bikedetails);
-       bikehole.appendChild(bikeitems)
-     })
-</script>
+<script src="script.js"></script>
 </body>
-</html
+</html>
